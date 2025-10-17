@@ -12,6 +12,9 @@ ITC-Impurity-Benchmark/
 ├── benchmarks/ # Benchmarking scripts
 ├── results/ # Experimental results
 ├── utils/ # Utilities and visualization
+├── scripts/ # Utilitary Scripts
+├── notebooks/ # Analysis Notebooks
+└── tests/ # Unitary tests
 └── run_all_benchmarks.py # Main script
 ```
 
