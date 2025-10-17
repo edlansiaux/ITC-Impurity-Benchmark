@@ -1,0 +1,19 @@
+name: itc-benchmark
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - scipy
+  - scikit-learn
+  - pandas
+  - matplotlib
+  - seaborn
+  - tqdm
+  - statsmodels
+  - joblib
+  - jupyter
+  - pip
+  - pip:
+    - -r requirements.txt
