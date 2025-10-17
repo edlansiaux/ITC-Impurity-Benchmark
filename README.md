@@ -95,11 +95,11 @@ Our ITC metric shows:
 If you use this code in your research, please cite:
 
 ```bibtex
-@article{itc2024,
+@article{itc2025,
   title={ITC: A Novel Hybrid Impurity Measure for Optimal Decision Tree Construction},
   author={Edouard Lansiaux},
   journal={preprint},
-  year={2024}
+  year={2025}
 }
 ```
 ## 🤝 Contribution
