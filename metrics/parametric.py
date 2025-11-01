@@ -4,6 +4,7 @@ def renyi_entropy(proportions, alpha=0.5, epsilon=1e-15):
     """
     Entropie de Rényi d'ordre alpha
     """
+    proportions = np.asarray(proportions)
     proportions = np.clip(proportions, epsilon, 1 - epsilon)
     if alpha == 1:
         return -np.sum(proportions * np.log2(proportions))
@@ -14,6 +15,7 @@ def tsallis_entropy(proportions, alpha=1.5, epsilon=1e-15):
     """
     Entropie de Tsallis d'ordre alpha
     """
+    proportions = np.asarray(proportions)
     proportions = np.clip(proportions, epsilon, 1 - epsilon)
     if alpha == 1:
         return -np.sum(proportions * np.log2(proportions))
@@ -24,6 +26,7 @@ def normalized_tsallis(proportions, alpha=1.5, epsilon=1e-15):
     """
     Entropie de Tsallis normalisée
     """
+    proportions = np.asarray(proportions)
     K = len(proportions)
     if K <= 1:
         return 0.0
@@ -37,6 +40,7 @@ def kumaraswamy_charlier(proportions, a=2.0, b=2.0):
     """
     Métrique basée sur la distribution de Kumaraswamy
     """
+    proportions = np.asarray(proportions)
     return 1 - np.sum(proportions * (1 - (1 - proportions**a)**b))
 
 # Dictionnaire des métriques paramétriques

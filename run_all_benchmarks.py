@@ -5,16 +5,10 @@ Script principal pour exécuter tous les benchmarks
 
 import os
 import sys
+sys.path.append(os.path.dirname(__file__))
 import pandas as pd
 from datetime import datetime
-
-# Ajout du chemin des modules
-sys.path.append('.')
-
-from benchmarks.individual_metrics import run_individual_benchmarks
-from benchmarks.hybrid_comparison import run_hybrid_comparison
-from benchmarks.sensitivity_analysis import run_sensitivity_analysis
-from benchmarks.statistical_tests import run_statistical_analysis
+from benchmarks.__init__ import *
 
 def create_directories():
     """Crée la structure de dossiers nécessaire"""

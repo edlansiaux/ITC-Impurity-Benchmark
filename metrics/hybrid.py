@@ -6,6 +6,7 @@ def itc_impurity(proportions, alpha=1.5, beta=3.5, gamma=0.3):
     """
     Integrated Tsallis Combination (ITC) - Notre métrique hybride
     """
+    proportions = np.asarray(proportions)
     K = len(proportions)
     if K <= 1:
         return 0.0
@@ -26,6 +27,7 @@ def shannon_polarization_hybrid(proportions, gamma=0.5, beta=3.5, epsilon=1e-15)
     from .classical import shannon_entropy
     from .distance_based import polarization_index
     
+    proportions = np.asarray(proportions)
     K = len(proportions)
     if K <= 1:
         return 0.0
@@ -47,6 +49,7 @@ def tsallis_hellinger_hybrid(proportions, alpha=1.5, gamma=0.5):
     from .parametric import normalized_tsallis
     from .distance_based import hellinger_distance
     
+    proportions = np.asarray(proportions)
     tsallis_norm = normalized_tsallis(proportions, alpha=alpha)
     hellinger_val = hellinger_distance(proportions)
     

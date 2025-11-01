@@ -4,12 +4,14 @@ def gini_impurity(proportions):
     """
     Impureté de Gini classique
     """
+    proportions = np.asarray(proportions)
     return 1 - np.sum(proportions**2)
 
 def shannon_entropy(proportions, epsilon=1e-15):
     """
     Entropie de Shannon
     """
+    proportions = np.asarray(proportions)
     proportions = np.clip(proportions, epsilon, 1 - epsilon)
     return -np.sum(proportions * np.log2(proportions))
 
@@ -17,6 +19,7 @@ def misclassification_rate(proportions):
     """
     Taux d'erreur de classification
     """
+    proportions = np.asarray(proportions)
     return 1 - np.max(proportions)
 
 # Dictionnaire des métriques classiques
